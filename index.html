@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+var string = [ "Malone", "Chris", "Paul", "George", "Karl"];
+
+document.write("Original String before sorted</br>");
+document.write(string);
+
+document.write("</br>");
+
+//Function to sort
+function string_sort(str) {
+    var i = 0, j;
+    while (i < str.length) {
+        j = i + 1;
+        while (j < str.length) {
+            if (str[j] < str[i]) {
+                var temp = str[i];
+                str[i] = str[j];
+                str[j] = temp;
+            }
+            j++;
+        }
+        i++;
+    }
+}
+//Call string_sort
+string_sort(string);
+
+document.write("</br>String after being sorted</br>");
+document.write(string);
+
+</script>
+
+  </body>
+</html>
